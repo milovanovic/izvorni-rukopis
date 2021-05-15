@@ -1,0 +1,27 @@
+
+
+
+
+
+http://en.wikipedia.org/wiki/Docstring
+
+http://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+
+
+Област видљивости:
+
+https://en.wikipedia.org/wiki/Scope_(computer_science)
+
+
+Затвореност или затворење:
+
+https://en.wikipedia.org/wiki/Closure_(computer_programming)
+
+
+Композиција функција:
+
+https://en.wikipedia.org/wiki/Function_composition_(computer_science)
+
+
+https://en.wikipedia.org/wiki/First-class_citizen
+https://en.wikipedia.org/wiki/First-class_function
