@@ -145,6 +145,30 @@ latex_elements = {
      \substitutefont{T2A}{\rmdefault}{cmr}
      \substitutefont{T2A}{\sfdefault}{cmss}
      \substitutefont{T2A}{\ttdefault}{cmtt}
+     
+     % MarVoSym symbols
+     \newcommand{\mvs}{\fontfamily{mvs}\fontencoding{U}%
+     \fontseries{m}\fontshape{n}\selectfont}
+     \newcommand{\mvchr}[1]{{\mvs\char#1}}
+     
+     \newcommand\Letter{\mvchr{66}}
+     
+     % STIX math symbols
+     \DeclareFontEncoding{LS1}{}{}
+     \DeclareFontEncoding{LS2}{}{\noaccents@}
+     \DeclareFontSubstitution{LS1}{stix}{m}{n}
+     \DeclareFontSubstitution{LS2}{stix}{m}{n}
+     \DeclareSymbolFont{STIXarrows3}       {LS2}{stixtt}   {m} {n}
+     \DeclareSymbolFont{STIXsymbols4}      {LS1}{stixbb}   {m}{it}
+     
+     \DeclareMathSymbol{\spadesuit}                {\mathord}{STIXarrows3}{"0F}
+     \DeclareMathSymbol{\heartsuit}                {\mathord}{STIXarrows3}{"10}
+     \DeclareMathSymbol{\diamondsuit}              {\mathord}{STIXarrows3}{"11}
+     \DeclareMathSymbol{\clubsuit}                 {\mathord}{STIXarrows3}{"12}
+     \DeclareMathSymbol{\varspadesuit}             {\mathord}{STIXsymbols4}{"FD}
+     \DeclareMathSymbol{\varheartsuit}             {\mathord}{STIXsymbols4}{"FE}
+     \DeclareMathSymbol{\vardiamondsuit}           {\mathord}{STIXsymbols4}{"FF}
+     \DeclareMathSymbol{\varclubsuit}              {\mathord}{STIXarrows3}{"2E}
     ''',
     'fvset': r'\fvset{fontsize=\small}', # or fontsize=auto
     'geometry': r'\usepackage[paperwidth=170mm,paperheight=240mm]{geometry}',
@@ -215,7 +239,7 @@ latex_elements = {
 
     #'babel': r'\usepackage[serbian]{babel}',
     'preamble': r'''
-     \usepackage{marvosym}
+     %\usepackage{marvosym}
      %\usepackage{txfonts}
      \DeclareUnicodeCharacter{2660}{$\spadesuit$}
      \DeclareUnicodeCharacter{2661}{$\heartsuit$}
