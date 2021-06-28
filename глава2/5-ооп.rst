@@ -441,8 +441,17 @@
 
 .. only:: html
 
-   .. image:: multiple_inheritance.png
-       :align: center
+   .. tikz:: [->,>=stealth,shorten <=5pt,shorten >=5pt,auto,ultra thick]
+      \tikzstyle{every node}=[draw=cyan, inner sep=3pt, minimum width=2cm, node distance=3cm]
+      \node (A) {Рачун};
+      \node (B) [below left of=A] {ТекућиРачун};
+      \node (C) [below right of=A] {ШтедниРачун};
+      \node (D) [below right of=B] {ПромотивниРачун};
+      \draw[draw=olive, ultra thick] (D) -- (B);
+      \draw[draw=olive, ultra thick] (D) -- (C);
+      \draw[draw=olive, ultra thick] (B) -- (A);
+      \draw[draw=olive, ultra thick] (C) -- (A);
+      :libs: automata
 
 .. raw:: latex
 

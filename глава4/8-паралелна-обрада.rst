@@ -339,15 +339,7 @@
 
 Извор застоја је *кружно чекање*, приказано у наставку над процесима. Ниједан процес се не може наставити јер чека на друге процесе који и сами чекају да се он сам заврши.
 
-.. only:: html
-
-   .. image:: deadlock.png
-       :align: center
-
-.. raw:: latex
-
-   \begin{center}
-   \begin{tikzpicture}[->,>=stealth,shorten >=1pt,auto,node distance=4cm,semithick]
+.. tikz:: [->,>=stealth,shorten >=1pt,auto,node distance=4cm,semithick]
    \node[state, minimum size=3cm]                                 (q0) {Процес А};
    \node[state, below right of=q0, yshift=-1cm, minimum size=3cm] (q2) {Процес В};
    \node[state, above right of=q2, yshift=1cm, minimum size=3cm]  (q1) {Процес Б};
@@ -355,8 +347,7 @@
        (q0) edge [bend left] node [above] {чека на} (q1)
        (q1) edge [bend left] node [right] {чека на} (q2)
        (q2) edge [bend left] node [left]  {чека на} (q0);
-   \end{tikzpicture}
-   \end{center}
+   :libs: automata
 
 Као пример, биће направљен застој два процеса. Претпоставимо да процеси деле дуплекс цев и покушавају да комуницирају један са другим на следећи начин::
 

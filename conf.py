@@ -40,8 +40,7 @@ release = 'прво штампано'
 # ones.
 #extensions = [
 #]
-extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest']#, 'sphinxcontrib.tikz']#,
-#              'pyspecific', 'c_annotations', 'escape4chm']
+extensions = ['sphinx.ext.coverage', 'sphinx.ext.doctest', 'sphinxcontrib.tikz']
 
 doctest_global_setup = '''
 try:
@@ -135,7 +134,8 @@ CCBYSAlogo = './LaTeXcustom/by-sa.eps'
 latex_additional_files = [CCBYSAlogo]
 latex_engine = 'pdflatex'
 latex_elements = {
-    'extrapackages': r'\usepackage{CJKutf8}\usepackage{tikz}\usetikzlibrary{automata}',  # for title-page
+    'extrapackages': r'\usepackage{CJKutf8}', # for title-page
+    #'extrapackages': r'\usepackage{tikz}\usetikzlibrary{automata}',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     #'fncychap': r'\usepackage[Lenny]{fncychap}',
     'figure_align': 'htbp',
@@ -287,3 +287,10 @@ texinfo_documents = [
     (master_doc, 'KomRaProg', 'Компоновање рачунарских програма', author,
      'KomRaProg', 'One line description of project.', 'Miscellaneous'),
 ]
+
+# -- Options for TikZ Sphinx Extension ---------------------------------------
+
+tikz_proc_suite = 'pdf2svg'
+tikz_transparent = True
+tikz_tikzlibraries = 'automata'
+tikz_latex_preamble = '\\usepackage[T2A]{fontenc}'
