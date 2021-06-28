@@ -197,9 +197,9 @@ latex_elements = {
      \sphinxincludegraphics{{by-sa}.eps}
      Нека права задржана. Ово дело објављено је под условима Кријејтив комонс Ауторство\sphinxhyphen{}делити под истим условима 4.0 међународне лиценце (енг. \sphinxhref{http://creativecommons.org/licenses/by-sa/4.0}{Creative Commons Attribution\sphinxhyphen{}ShareAlike 4.0 International License} --- CC BY\sphinxhyphen{}SA).
      }\sphinxmaketitle
-     \begin{CJK}{UTF8}{min}
+     %\begin{CJK}{UTF8}{min}
     ''',
-    'atendofbody': r'\end{CJK}',
+    'atendofbody': r'%\end{CJK}',
     # The paper size ('a4paper', 'b5paper' or 'letterpaper').
     #
     #'papersize': 'a4paper',
